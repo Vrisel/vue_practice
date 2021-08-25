@@ -1,22 +1,22 @@
 <template>
   <div>
-    <form id="tarot-form" onsubmit="_tarotQuestion(event);">
+    <form id="tarot-form" @submit.prevent="tarotQuestion">
       <label for="type">방식</label>
       <select name="type" id="type">
         <option value="1">기본</option>
       </select>
 
       <label for="tarot-question">질문</label>
-      <input type="text" name="question" id="question" placeholder="질문을 입력하세요." />
+      <input type="text" v-model="value" id="question" placeholder="질문을 입력하세요." />
       <button type="submit">질문하기</button>
     </form>
     <div id="tarot-answer"></div>
-    <button type="button" id="tarot-reset" onclick="tarotReset(event);" class="disabled" disabled>다시하기</button>
+    <button type="button" id="tarot-reset" @click.prevent="tarotReset" class="disabled" disabled>다시하기</button>
   </div>
 </template>
 
 <script>
-import {_tarotQuestion, _tarotReset} from '@/scripts/tarot.js'
+import {tarotQuestion, tarotReset} from '@/scripts/tarot.js'
 
 /* document.addEventListener("DOMContentLoaded", function(){
   let question = document.getElementById('tarot-form');
@@ -28,15 +28,8 @@ import {_tarotQuestion, _tarotReset} from '@/scripts/tarot.js'
 export default {
   name: 'Tarot',
   methods: {
-    tarotQuestion(e) {
-      alert('?'); // 작동 안 함;
-      e.preventDefault();
-      _tarotQuestion();
-    },
-    tarotReset(e) {
-      e.preventDefault();
-      _tarotReset();
-    }
+    tarotQuestion,
+    tarotReset
   }
 }
 </script>

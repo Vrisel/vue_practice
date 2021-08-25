@@ -1,4 +1,4 @@
-export {_tarotQuestion, _tarotReset};
+export {tarotQuestion, tarotReset};
 
 /* form.addEventListener('submit', function (e) {
   // 입력 비활성화
@@ -7,16 +7,16 @@ export {_tarotQuestion, _tarotReset};
   // 리셋 버튼 (누르면 카드정보 지우고 입력창 활성화 및 포커스) 생성
 }); */
 
-function _tarotQuestion(){
+function tarotQuestion(){
   let form = document.getElementById('tarot-form');
-  let question = form.getElementById('tarot-question');
+  let question = document.getElementById('tarot-question');
   
   if (!question.value) {
-    alert('질문을 입력해주세요.');
+    window.alert('질문을 입력해주세요.');
     question.focus();
   }
   else if (!question.value.endsWith('?')) {
-    alert('질문은 일반적으로 물음표로 끝나지요? :)');
+    window.alert('질문은 일반적으로 물음표로 끝나지요? :)');
     question.focus();
   }
   else {
@@ -28,8 +28,8 @@ function _tarotQuestion(){
   return false;
 }
 
-function _tarotReset() {
-  if (confirm('다시 하시겠습니까?')) {
+function tarotReset() {
+  if (window.confirm('다시 하시겠습니까?')) {
     let answer = document.getElementById('tarot-answer');
     answer.innerHTML = '';
 
