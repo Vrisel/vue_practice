@@ -1,23 +1,43 @@
 <template>
   <div>
     <form @submit.prevent="onSubmit">
-      <label>
-        스프레드
-        <select v-model="spread" ref="spread">
-          <option disabled value="">==스프레드==</option>
-          <option>기본</option>
-        </select>
-      </label>
+      <div>
+        <label>
+          스프레드
+          <select v-model="spread" ref="spread" :disabled="isAsked">
+            <option disabled value="">==스프레드==</option>
+            <option value="1">원 카드</option>
+            <option value="3">쓰리 카드</option>
+            <!-- <option value="5">말발굽</option>
+            <option value="7">보름달</option>
+            <option value="a">켈트 십자가</option>
+            <option value="b">생명의 나무</option> -->
+          </select>
+        </label>
+      </div>
 
-      <label>
-        질문
-        <input type="text" placeholder="질문을 입력하세요." ref="question" v-model.lazy.trim="question" :readonly="isAsked"/>
-      </label>
-      <button type="submit" :disabled="isAsked">질문하기</button>
+      <div>
+        <label>
+          질문
+          <input type="text" placeholder="질문을 입력하세요." ref="question" v-model.lazy.trim="question" :disabled="isAsked"/>
+        </label>
+        <button type="submit" :disabled="isAsked">질문하기</button>
+      </div>
     </form>
 
-    <div v-show="isAsked">
-      <p v-html="answer"></p>
+    <div v-if="isAsked">
+      <table>
+        <thead><tr>
+          <th>의미</th>
+          <th>카드</th>
+          <th>상징</th>
+        </tr></thead>
+        <tbody><tr v-for="i of cards.length" :key="i">
+          <th>{{descriptions[i-1]}}</th>
+          <td>{{tarot[cards[i-1]].name}}</td>
+          <td>{{tarot[cards[i-1]].desc}}</td>
+        </tr></tbody>
+      </table>
       <button type="button" @click="tarotReset">다시하기</button>
     </div>
   </div>
@@ -31,9 +51,10 @@ export default {
   data() {
     return {
       isAsked: false,
-      answer: "",
       spread: "",
+      question: "",
       cards: [],
+      descriptions: [],
       tarot
     };
   },
@@ -52,23 +73,32 @@ export default {
         this.$refs.question.focus();
       } */
       else {
+        this.cards = [];
+        switch (this.spread) {
+          case "1": this.getRandomCard(1); break;
+          case "3": this.getRandomCard(3); break;
+          default: break;
+        }
+        this.descriptions = [];
+        this.getDescriptions();
+
         this.isAsked = true;
-        this.cards.push(this.getRandomCard());
-        this.answer = `뽑은 카드는 <strong>${Math.random() > 0.5 ? '정' : '역'}방향</strong>의 <strong>${this.cards[0].name} 카드</strong> 입니다.<br/>`;
-        this.answer += `이 카드는 <strong>${this.cards[0].desc}</strong>을(를) 의미합니다.`;
+        
         //this.$refs.resetBtn.focus(); //v-if나 v-show가 동작하기 이전에 focus를 잡으려고 해서인지 워닝 뜸
       }
     },
     tarotReset: function () {
       if (window.confirm('다시 하시겠습니까?')) {
         this.cards = [];
+        this.descriptions = [];
         this.isAsked = false;
-        this.answer = "";
         this.question = "";
         this.$refs.question.focus();
       }
     },
-    getRandomCard: function() {
+    getRandomCard: function(i) {
+      if (i <= 0) return;
+
       let a = ['M', 'c', 's', 'h', 'd'][Math.floor(Math.random() * 5)];
       let b;
       if (a === 'M') {
@@ -84,7 +114,25 @@ export default {
           default: break;
         }
       }
-      return tarot[a+b];
+      if (!this.cards.includes(a+b)) {
+        this.cards.push(a+b);
+        i -= 1;
+      }
+      this.getRandomCard(i);
+    },
+    getDescriptions: function() {
+      switch (this.spread) {
+        case "1":
+          this.descriptions.push("-");
+          break;
+        case "3":
+          this.descriptions.push(
+            "원인/과거/아침",
+            "과정/현재/낮",
+            "결과/미래/밤"
+          );
+          break;
+      }
     }
   }
 }
