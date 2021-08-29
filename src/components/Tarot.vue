@@ -1,50 +1,40 @@
 <template>
-  <div>
-    <form @submit.prevent="onSubmit">
-      <div>
-        <label>
-          스프레드
-          <select v-model="spread" ref="spread" :disabled="isAsked">
-            <option disabled value="">==스프레드==</option>
-            <option value="1">원 카드</option>
-            <option value="3">쓰리 카드</option>
-            <!-- <option value="5">말발굽</option>
-            <option value="7">보름달</option>
-            <option value="a">켈트 십자가</option>
-            <option value="b">생명의 나무</option> -->
-          </select>
-        </label>
-      </div>
-
-      <div>
-        <label>
-          질문
-          <input type="text" placeholder="질문을 입력하세요." ref="question" v-model.lazy.trim="question" :disabled="isAsked"/>
-        </label>
-        <button type="submit" :disabled="isAsked">질문하기</button>
-      </div>
-    </form>
+  <div id="tarot">
+    <b-form @submit.prevent="onSubmit">
+      <b-row class="mb-3">
+        <b-col lg="1" cols="2">
+          <label>스프레드</label>
+        </b-col>
+        <b-col>
+          <b-form-select v-model="spread" :options="spreadOptions" required :disabled="isAsked" ref="spread">
+            <template #first>
+              <b-form-select-option disabled :value="null">==스프레드==</b-form-select-option>
+            </template>
+          </b-form-select>
+        </b-col>
+      </b-row>
+          
+      <b-row class="mb-3">
+        <b-col lg="1" cols="2">
+          <label>질문</label>
+        </b-col>
+        <b-col>
+          <b-form-input type="text" placeholder="질문을 입력하세요." required :disabled="isAsked" v-model.lazy.trim="question" ref="question" />
+        </b-col>
+      </b-row>
+      
+      <b-button type="submit" :disabled="isAsked" block variant="primary">카드 보기</b-button>
+    </b-form>
 
     <div v-if="isAsked">
-      <table>
-        <thead><tr>
-          <th>의미</th>
-          <th>카드</th>
-          <th>상징</th>
-        </tr></thead>
-        <tbody><tr v-for="i of cards.length" :key="i">
-          <th>{{descriptions[i-1]}}</th>
-          <td>{{tarot[cards[i-1]].name}}</td>
-          <td>{{tarot[cards[i-1]].desc}}</td>
-        </tr></tbody>
-      </table>
-      <button type="button" @click="tarotReset">다시하기</button>
+      <b-table :fields="tableFields" :items="tableItems"></b-table>
+      <b-button type="button" @click="tarotReset" block variant="secondary">다시하기</b-button>
     </div>
   </div>
 </template>
 
 <script>
-import tarot from '@/scripts/tarot.js';
+import {tarot, description} from '@/scripts/tarot.js';
 
 export default {
   name: 'Tarot',
@@ -54,38 +44,51 @@ export default {
       spread: "",
       question: "",
       cards: [],
-      descriptions: [],
-      tarot
+      tarot, description,
+
+      spreadOptions: [
+        { value: "1", text: '원 카드'},
+        { value: "3", text: '쓰리 카드'},
+        { value: "hoof", text: '말발굽'},
+        { value: "moon", text: '보름달'},
+        { value: 'cross', text: '켈트 십자가'},
+        { value: 'tree', text: '생명의 나무'}
+      ],
+      tableFields: ["의미", "카드", "상징"],
+      tableItems: []
     };
   },
   methods: {
     onSubmit: function() {
-      if (!this.spread) {
-        alert('스프레드 방식을 선택해주세요.');
-        this.$refs.spread.focus();
-      }
-      else if (!this.question) {
-        alert('질문을 입력해주세요.');
-        this.$refs.question.focus();
-      }
-      /* else if (!this.question.endsWith('?')) {
+      /* if (!this.question.endsWith('?')) {
         alert('질문은 일반적으로 물음표로 끝나지요? :)');
         this.$refs.question.focus();
       } */
-      else {
+      //else {
         this.cards = [];
         switch (this.spread) {
           case "1": this.getRandomCard(1); break;
           case "3": this.getRandomCard(3); break;
+          case "hoof": this.getRandomCard(5); break;
+          case "moon": this.getRandomCard(7); break;
+          case "cross": this.getRandomCard(10); break;
+          case "tree": this.getRandomCard(10); break;
           default: break;
         }
-        this.descriptions = [];
-        this.getDescriptions();
+
+        this.tableItems = [];
+        for (let i = 0; i < this.cards.length; i++) {
+          this.tableItems.push({
+            "의미": this.description[this.spread][i],
+            "카드": this.tarot[this.cards[i]].name,
+            "상징": this.tarot[this.cards[i]].desc
+          });
+        }
 
         this.isAsked = true;
         
         //this.$refs.resetBtn.focus(); //v-if나 v-show가 동작하기 이전에 focus를 잡으려고 해서인지 워닝 뜸
-      }
+      //}
     },
     tarotReset: function () {
       if (window.confirm('다시 하시겠습니까?')) {
@@ -119,24 +122,13 @@ export default {
         i -= 1;
       }
       this.getRandomCard(i);
-    },
-    getDescriptions: function() {
-      switch (this.spread) {
-        case "1":
-          this.descriptions.push("-");
-          break;
-        case "3":
-          this.descriptions.push(
-            "원인/과거/아침",
-            "과정/현재/낮",
-            "결과/미래/밤"
-          );
-          break;
-      }
     }
   }
 }
 </script>
 
 <style>
+#tarot {
+  text-align: start;
+}
 </style>

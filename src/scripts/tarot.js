@@ -1,4 +1,4 @@
-export default {
+export const tarot = {
   "M0": {
     "number": "Major 0",
     "name": "The Fool (광대)",
@@ -181,72 +181,72 @@ export default {
   },
   "s1": {
     "number": "spade 1",
-    "name": "성배 1",
+    "name": "검 1",
     "desc": "힘의 승리, 사랑과 증오에 있어서의 커다란 힘"
   },
   "s2": {
     "number": "spade 2",
-    "name": "성배 2",
+    "name": "검 2",
     "desc": "균형, 조건부의 조화"
   },
   "s3": {
     "number": "spade 3",
-    "name": "성배 3",
+    "name": "검 3",
     "desc": "후퇴, 단절, 슬픔"
   },
   "s4": {
     "number": "spade 4",
-    "name": "성배 4",
+    "name": "검 4",
     "desc": "은둔, 회복, 자기치유"
   },
   "s5": {
     "number": "spade 5",
-    "name": "성배 5",
+    "name": "검 5",
     "desc": "타락, 폐지, 손실"
   },
   "s6": {
     "number": "spade 6",
-    "name": "성배 6",
+    "name": "검 6",
     "desc": "작업을 끝마침, 중개자, 득책"
   },
   "s7": {
     "number": "spade 7",
-    "name": "성배 7",
+    "name": "검 7",
     "desc": "기획, 계획"
   },
   "s8": {
     "number": "spade 8",
-    "name": "성배 8",
+    "name": "검 8",
     "desc": "구속된 힘 비난, 나쁜 소식"
   },
   "s9": {
     "number": "spade 9",
-    "name": "성배 9",
+    "name": "검 9",
     "desc": "실망, 환멸"
   },
   "s10": {
     "number": "spade 10",
-    "name": "성배 10",
+    "name": "검 10",
     "desc": "황폐, 고통, 여명"
   },
   "sP": {
     "number": "spade Page",
-    "name": "성배 Page",
+    "name": "검 Page",
     "desc": "감시, 경계, 스파이, 시험"
   },
   "sN": {
     "number": "spade Knight",
-    "name": "성배 Knight",
+    "name": "검 Knight",
     "desc": "용감함, 격노"
   },
   "sQ": {
     "number": "spade Queen",
-    "name": "성배 Queen",
+    "name": "검 Queen",
     "desc": "정숙하고 슬픔이 많은 여성, 미망인, 상실, 예리한, 눈치 빠른, 결단력 있는"
   },
   "sK": {
     "number": "spade King",
-    "name": "성배 King",
+    "name": "검 King",
     "desc": "재판관, 정의, 권위, 명령"
   },
   "h1": {
@@ -389,4 +389,55 @@ export default {
     "name": "동전 King",
     "desc": "실제적인 지성, 사업, 성공"
   }
+};
+
+export const description = {
+  "1": [
+    "-"
+  ],
+  "3": [
+    "원인/과거/아침",
+    "과정/현재/낮",
+    "결과/미래/밤"
+  ],
+  "hoof": [
+    "질문자의 현재",
+    "질문자가 나아가야 할 방향",
+    "장해물",
+    "힘을 주는 것, 헤쳐나갈 지략",
+    "결과"
+  ],
+  "moon":[
+    "질문자의 지금 삶",
+    "인간관계 및 주변 환경",
+    "목표를 방해하는 것",
+    "장해물을 극복하기 위해서는 어떻게 해야 하나?",
+    "목표를 이루기 위해 질문자가 해야할 것",
+    "목표를 위하여 외부, 혹은 타인으로부터 배워야 할 것",
+    "예상 결과"
+  ],
+  "cross": [
+    "Now: 현재 처한 상황",
+    "Challenge: 방해하는 것, 혹은 영향을 행사하는 것",
+    "Past: 먼 과거",
+    "Recent past: 질문자에게 영향을 끼칠 수 있는 가까운 과거 혹은 얽매여 있는 과거의 사념.",
+    "Future: 직면하고 있는 가까운 미래",
+    "Outcome: 아무런 대응을 하지 않을 때의 결과",
+    "You: 현재 질문자의 심리와 감정",
+    "External: 외부 요인 - 타인의 영향력, 혹은 타인이 이 문제를 바라보는 시각",
+    "Hopes and Desires: 희망 혹은 두려움",
+    "Final outcome: 문제의 총체적 해결",
+  ],
+  "tree": [
+    "영적인 것",
+    "책임",
+    "장애물",
+    "도움을 주는 것",
+    "나를 반대하는 것, 혹은 문제가 되는 것",
+    "성취할 수 있는 것",
+    "감정 관계",
+    "인간관계 및 커리어",
+    "무의식의 기반",
+    "가족들에 대해"
+  ]
 };
