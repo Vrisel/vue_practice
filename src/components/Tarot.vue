@@ -27,7 +27,11 @@
     </b-form>
 
     <div v-if="isAsked">
-      <b-table :fields="tableFields" :items="tableItems"></b-table>
+      <b-table :fields="tableFields" :items="tableItems">
+        <template #cell(카드)="data">
+          <img :src="data.value" height="200" />
+        </template>
+      </b-table>
       <b-button type="button" @click="tarotReset" block variant="secondary">다시하기</b-button>
     </div>
   </div>
@@ -54,7 +58,7 @@ export default {
         { value: 'cross', text: '켈트 십자가'},
         { value: 'tree', text: '생명의 나무'}
       ],
-      tableFields: ["의미", "카드", "상징"],
+      tableFields: ["의미", "카드", "이름", "상징"],
       tableItems: []
     };
   },
@@ -80,7 +84,8 @@ export default {
         for (let i = 0; i < this.cards.length; i++) {
           this.tableItems.push({
             "의미": this.description[this.spread][i],
-            "카드": this.tarot[this.cards[i]].name,
+            "카드": require(`/src/assets/img/tarot/${this.cards[i]}.jpg`),
+            "이름": this.tarot[this.cards[i]].name,
             "상징": this.tarot[this.cards[i]].desc
           });
         }
@@ -102,7 +107,7 @@ export default {
     getRandomCard: function(i) {
       if (i <= 0) return;
 
-      let a = ['M', 'c', 's', 'h', 'd'][Math.floor(Math.random() * 5)];
+      let a = ['M', 'w', 's', 'c', 'p'][Math.floor(Math.random() * 5)];
       let b;
       if (a === 'M') {
         b = Math.floor(Math.random() * 22);

@@ -109,283 +109,283 @@ export const tarot = {
     "name": "The World (세계)",
     "desc": "완성, 완전"
   },
-  "c1": {
-    "number": "club 1",
+  "w1": {
+    "number": "wand 1",
     "name": "지팡이 1",
     "desc": "창조력, 출발"
   },
-  "c2": {
-    "number": "club 2",
+  "w2": {
+    "number": "wand 2",
     "name": "지팡이 2",
     "desc": "재산, 장엄함, 영주"
   },
-  "c3": {
-    "number": "club 3",
+  "w3": {
+    "number": "wand 3",
     "name": "지팡이 3",
     "desc": "확립된 힘, 교역, 사업상의 협력"
   },
-  "c4": {
-    "number": "club 4",
+  "w4": {
+    "number": "wand 4",
     "name": "지팡이 4",
     "desc": "작업의 완성, 휴식, 평화"
   },
-  "c5": {
-    "number": "club 5",
+  "w5": {
+    "number": "wand 5",
     "name": "지팡이 5",
     "desc": "치열한 경쟁, 스포츠"
   },
-  "c6": {
-    "number": "club 6",
+  "w6": {
+    "number": "wand 6",
     "name": "지팡이 6",
     "desc": "승리자, 대뉴스의 도달"
   },
-  "c7": {
-    "number": "club 7",
+  "w7": {
+    "number": "wand 7",
     "name": "지팡이 7",
     "desc": "용기, 토론, 교섭"
   },
-  "c8": {
-    "number": "club 8",
+  "w8": {
+    "number": "wand 8",
     "name": "지팡이 8",
     "desc": "활동성, 재빠름"
   },
-  "c9": {
-    "number": "club 9",
+  "w9": {
+    "number": "wand 9",
     "name": "지팡이 9",
     "desc": "억압된 상황에서의 강함"
   },
-  "c10": {
-    "number": "club 10",
+  "w10": {
+    "number": "wand 10",
     "name": "지팡이 10",
     "desc": "억압, 너무 많은 재산"
   },
-  "cP": {
-    "number": "club Page",
+  "wP": {
+    "number": "wand Page",
     "name": "지팡이 Page",
     "desc": "젊은 남성, 충실, 외교사절, 우편"
   },
-  "cN": {
-    "number": "club Knight",
+  "wN": {
+    "number": "wand Knight",
     "name": "지팡이 Knight",
     "desc": "출발, 친숙한 젊은이"
   },
-  "cQ": {
-    "number": "club Queen",
+  "wQ": {
+    "number": "wand Queen",
     "name": "지팡이 Queen",
     "desc": "시골의 여성, 친숙한 정적, 존경"
   },
-  "cK": {
-    "number": "club King",
+  "wK": {
+    "number": "wand King",
     "name": "지팡이 King",
     "desc": "시골의 남성, 정직, 양심적"
   },
   "s1": {
-    "number": "spade 1",
+    "number": "sword 1",
     "name": "검 1",
     "desc": "힘의 승리, 사랑과 증오에 있어서의 커다란 힘"
   },
   "s2": {
-    "number": "spade 2",
+    "number": "sword 2",
     "name": "검 2",
     "desc": "균형, 조건부의 조화"
   },
   "s3": {
-    "number": "spade 3",
+    "number": "sword 3",
     "name": "검 3",
     "desc": "후퇴, 단절, 슬픔"
   },
   "s4": {
-    "number": "spade 4",
+    "number": "sword 4",
     "name": "검 4",
     "desc": "은둔, 회복, 자기치유"
   },
   "s5": {
-    "number": "spade 5",
+    "number": "sword 5",
     "name": "검 5",
     "desc": "타락, 폐지, 손실"
   },
   "s6": {
-    "number": "spade 6",
+    "number": "sword 6",
     "name": "검 6",
     "desc": "작업을 끝마침, 중개자, 득책"
   },
   "s7": {
-    "number": "spade 7",
+    "number": "sword 7",
     "name": "검 7",
     "desc": "기획, 계획"
   },
   "s8": {
-    "number": "spade 8",
+    "number": "sword 8",
     "name": "검 8",
     "desc": "구속된 힘 비난, 나쁜 소식"
   },
   "s9": {
-    "number": "spade 9",
+    "number": "sword 9",
     "name": "검 9",
     "desc": "실망, 환멸"
   },
   "s10": {
-    "number": "spade 10",
+    "number": "sword 10",
     "name": "검 10",
     "desc": "황폐, 고통, 여명"
   },
   "sP": {
-    "number": "spade Page",
+    "number": "sword Page",
     "name": "검 Page",
     "desc": "감시, 경계, 스파이, 시험"
   },
   "sN": {
-    "number": "spade Knight",
+    "number": "sword Knight",
     "name": "검 Knight",
     "desc": "용감함, 격노"
   },
   "sQ": {
-    "number": "spade Queen",
+    "number": "sword Queen",
     "name": "검 Queen",
     "desc": "정숙하고 슬픔이 많은 여성, 미망인, 상실, 예리한, 눈치 빠른, 결단력 있는"
   },
   "sK": {
-    "number": "spade King",
+    "number": "sword King",
     "name": "검 King",
     "desc": "재판관, 정의, 권위, 명령"
   },
-  "h1": {
-    "number": "heart 1",
+  "c1": {
+    "number": "cup 1",
     "name": "성배 1",
     "desc": "기쁨, 만족"
   },
-  "h2": {
-    "number": "heart 2",
+  "c2": {
+    "number": "cup 2",
     "name": "성배 2",
     "desc": "사랑, 우정, 일치"
   },
-  "h3": {
-    "number": "heart 3",
+  "c3": {
+    "number": "cup 3",
     "name": "성배 3",
     "desc": "풍족함, 행복, 성취, 자유"
   },
-  "h4": {
-    "number": "heart 4",
+  "c4": {
+    "number": "cup 4",
     "name": "성배 4",
     "desc": "권태, 포식, 뒤섞인 쾌락"
   },
-  "h5": {
-    "number": "heart 5",
+  "c5": {
+    "number": "cup 5",
     "name": "성배 5",
     "desc": "손실, 별 거 아닌 유산"
   },
-  "h6": {
-    "number": "heart 6",
+  "c6": {
+    "number": "cup 6",
     "name": "성배 6",
     "desc": "과거를 돌이켜 봄,, 행복, 즐거움"
   },
-  "h7": {
-    "number": "heart 7",
+  "c7": {
+    "number": "cup 7",
     "name": "성배 7",
     "desc": "환상, 약간의 성공(비 영구적)"
   },
-  "h8": {
-    "number": "heart 8",
+  "c8": {
+    "number": "cup 8",
     "name": "성배 8",
     "desc": "성공의 방치, 겸손"
   },
-  "h9": {
-    "number": "heart 9",
+  "c9": {
+    "number": "cup 9",
     "name": "성배 9",
     "desc": "물질적 안녕, 만족"
   },
-  "h10": {
-    "number": "heart 10",
+  "c0": {
+    "number": "cup 10",
     "name": "성배 10",
     "desc": "만족, 사랑과 우정의 완전함"
   },
-  "hP": {
-    "number": "heart Page",
+  "cP": {
+    "number": "cup Page",
     "name": "성배 Page",
     "desc": "공부에 힘쓰는 젊은이, 숙고"
   },
-  "hN": {
-    "number": "heart Knight",
+  "cN": {
+    "number": "cup Knight",
     "name": "성배 Knight",
     "desc": "도착, 발전, 제안, 고무(鼓舞)"
   },
-  "hQ": {
-    "number": "heart Queen",
+  "cQ": {
+    "number": "cup Queen",
     "name": "성배 Queen",
     "desc": "선량하고 공정한 여성, 행복, 지혜"
   },
-  "hK": {
-    "number": "heart King",
+  "cK": {
+    "number": "cup King",
     "name": "성배 King",
     "desc": "공정한 남성, 창조적 지성"
   },
-  "d1": {
-    "number": "diamond 1",
+  "p1": {
+    "number": "pentacle 1",
     "name": "동전 1",
     "desc": "완전한 만족, 돈"
   },
-  "d2": {
-    "number": "diamond 2",
+  "p2": {
+    "number": "pentacle 2",
     "name": "동전 2",
     "desc": "명람함, 문서에 의한 뉴스/메시지"
   },
-  "d3": {
-    "number": "diamond 3",
+  "p3": {
+    "number": "pentacle 3",
     "name": "동전 3",
     "desc": "기예, 거래, 숙련공"
   },
-  "d4": {
-    "number": "diamond 4",
+  "p4": {
+    "number": "pentacle 4",
     "name": "동전 4",
     "desc": "소유의 보정, 소유물에 대한 집착, 선물"
   },
-  "d5": {
-    "number": "diamond 5",
+  "p5": {
+    "number": "pentacle 5",
     "name": "동전 5",
     "desc": "물질적인 트러블"
   },
-  "d6": {
-    "number": "diamond 6",
+  "p6": {
+    "number": "pentacle 6",
     "name": "동전 6",
     "desc": "성공, 선물"
   },
-  "d7": {
-    "number": "diamond 7",
+  "p7": {
+    "number": "pentacle 7",
     "name": "동전 7",
     "desc": "금전, 사업, 교역"
   },
-  "d8": {
-    "number": "diamond 8",
+  "p8": {
+    "number": "pentacle 8",
     "name": "동전 8",
     "desc": "장인 기질, 준비"
   },
-  "d9": {
-    "number": "diamond 9",
+  "p9": {
+    "number": "pentacle 9",
     "name": "동전 9",
     "desc": "물질적인 풍요, 달성"
   },
-  "d10": {
-    "number": "diamond 10",
+  "p0": {
+    "number": "pentacle 10",
     "name": "동전 10",
     "desc": "이익, 재산, 가족"
   },
-  "dP": {
-    "number": "diamond Page",
+  "pP": {
+    "number": "pentacle Page",
     "name": "동전 Page",
     "desc": "정려근면, 학생"
   },
-  "dN": {
-    "number": "diamond Knight",
+  "pN": {
+    "number": "pentacle Knight",
     "name": "동전 Knight",
     "desc": "유용, 재산, 책임, 정직"
   },
-  "dQ": {
-    "number": "diamond Queen",
+  "pQ": {
+    "number": "pentacle Queen",
     "name": "동전 Queen",
     "desc": "부, 관대, 안정"
   },
-  "dK": {
-    "number": "diamond King",
+  "pK": {
+    "number": "pentacle King",
     "name": "동전 King",
     "desc": "실제적인 지성, 사업, 성공"
   }
