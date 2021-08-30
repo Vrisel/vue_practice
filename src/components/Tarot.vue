@@ -6,7 +6,13 @@
           <label>스프레드</label>
         </b-col>
         <b-col>
-          <b-form-select v-model="spread" :options="spreadOptions" required :disabled="isAsked" ref="spread">
+          <b-form-select
+            v-model="spread"
+            :options="spreadOptions"
+            required
+            :disabled="isAsked"
+            ref="spread"
+          >
             <template #first>
               <b-form-select-option disabled :value="null">==스프레드==</b-form-select-option>
             </template>
@@ -19,7 +25,14 @@
           <label>질문</label>
         </b-col>
         <b-col>
-          <b-form-input type="text" placeholder="질문을 입력하세요." required :disabled="isAsked" v-model.lazy.trim="question" ref="question" />
+          <b-form-input
+            type="text"
+            placeholder="질문을 입력하세요."
+            required
+            :disabled="isAsked"
+            v-model.lazy.trim="question"
+            ref="question"
+          />
         </b-col>
       </b-row>
       
@@ -27,11 +40,31 @@
     </b-form>
 
     <div v-if="isAsked">
-      <b-table :fields="tableFields" :items="tableItems">
-        <template #cell(카드)="data">
-          <img :src="data.value" height="200" />
-        </template>
-      </b-table>
+      <b-table-simple>
+        <b-thead><b-tr>
+          <b-th width="15px">의미</b-th>
+          <b-th width="150px" v-for="i of cards.length" :key="i">{{ description[spread][i-1] }}</b-th>
+        </b-tr></b-thead>
+        <b-tbody>
+          <b-tr>
+            <b-th>카드</b-th>
+            <b-td v-for="i of cards.length" :key="i">
+              <img
+                :src="require(`/src/assets/img/tarot/${cards[i-1]}.jpg`)"
+                :title="tarot[cards[i-1]].name"
+                :alt="tarot[cards[i-1]].name"
+                width="120px"
+              />
+              <br />
+              {{ tarot[cards[i-1]].name }}
+            </b-td>
+          </b-tr>
+          <b-tr>
+            <b-th>상징</b-th>
+            <b-td v-for="i of cards.length" :key="i">{{ tarot[cards[i-1]].desc }}</b-td>
+          </b-tr>
+        </b-tbody>
+      </b-table-simple>
       <b-button type="button" @click="tarotReset" block variant="secondary">다시하기</b-button>
     </div>
   </div>
@@ -57,9 +90,9 @@ export default {
         { value: "moon", text: '보름달'},
         { value: 'cross', text: '켈트 십자가'},
         { value: 'tree', text: '생명의 나무'}
-      ],
+      ]/* ,
       tableFields: ["의미", "카드", "이름", "상징"],
-      tableItems: []
+      tableItems: [] */
     };
   },
   methods: {
@@ -80,7 +113,7 @@ export default {
           default: break;
         }
 
-        this.tableItems = [];
+        /* this.tableItems = [];
         for (let i = 0; i < this.cards.length; i++) {
           this.tableItems.push({
             "의미": this.description[this.spread][i],
@@ -88,7 +121,7 @@ export default {
             "이름": this.tarot[this.cards[i]].name,
             "상징": this.tarot[this.cards[i]].desc
           });
-        }
+        } */
 
         this.isAsked = true;
         
@@ -98,7 +131,6 @@ export default {
     tarotReset: function () {
       if (window.confirm('다시 하시겠습니까?')) {
         this.cards = [];
-        this.descriptions = [];
         this.isAsked = false;
         this.question = "";
         this.$refs.question.focus();
@@ -135,5 +167,18 @@ export default {
 <style>
 #tarot {
   text-align: start;
+}
+
+th, td { text-align: center; }
+@media (max-width: 700px) {
+  thead, tbody, th, td { display: block; }
+  tr { float: left; }
+
+  thead th:not(:first-child) { border-bottom-color: #dee2e6 !important; }
+  tbody th { border-bottom-color: currentColor; }
+
+  thead th { width: 180px; }
+  tbody tr { width: 200px; }
+  thead th:not(:first-child), td { height: 250px; }
 }
 </style>
