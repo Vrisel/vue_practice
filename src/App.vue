@@ -3,32 +3,34 @@
     <b-navbar
       variant="light" type="light"
       toggleable="lg"
-      class="mx-2"
+      class="px-4"
     >
-      <b-navbar-brand href='/'>Vue-ractice</b-navbar-brand>
+      <b-navbar-brand href='/home'>Vue-ractice</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item to="/">홈</b-nav-item>
+          <b-nav-item to="/Home">홈</b-nav-item>
           <b-nav-item to="/tarot">타로</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
-    <!-- <Tarot /> -->
+    
     <router-view></router-view>
+
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-//import Tarot from './components/Tarot.vue'
+import Footer from '@/components/layouts/Footer.vue';
 
 export default {
-  name: 'App'/* ,
+  name: 'App',
   components: {
-    Tarot
-  } */
+    Footer
+  }
 }
 </script>
 
