@@ -14,7 +14,7 @@
                 Vue Router
               </b-list-group-item>
               <b-list-group-item href="//bootstrap-vue.org/">
-                <b-icon icon="file-code"></b-icon>
+                <b-icon icon="bootstrap"></b-icon>
                 Bootstrap Vue
               </b-list-group-item>
               <b-list-group-item href="//en.wikipedia.org/wiki/Rider%E2%80%93Waite_tarot_deck">
@@ -23,6 +23,7 @@
               </b-list-group-item>
             </b-list-group>
           </b-col>
+
           <b-col cols="4" md="2">
             <h5>References</h5>
             <b-list-group>
@@ -34,18 +35,19 @@
               </b-list-group-item>
             </b-list-group>
           </b-col>
+
           <b-col cols="4" md="2">
             <h5>Contact</h5>
             <b-list-group>
-              <b-list-group-item href="//github.com/vrisel">
+              <b-list-group-item href="//github.com/vrisel" target="blank">
                 <b-icon icon="github"></b-icon>
                 GitHub
               </b-list-group-item>
-              <b-list-group-item href="//velog.io/@vrisel">
+              <b-list-group-item href="//velog.io/@vrisel" target="blank">
                 <b-icon icon="journal"></b-icon>
                 Velog
               </b-list-group-item>
-              <b-list-group-item href="//twitter.com/vrisel_p">
+              <b-list-group-item href="//twitter.com/vrisel_p" target="blank">
                 <b-icon icon="twitter"></b-icon>
                 Twitter
               </b-list-group-item>
