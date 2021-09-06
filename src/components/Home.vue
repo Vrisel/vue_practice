@@ -1,33 +1,19 @@
 <template>
-  <b-row class="mx-0">
-    <b-col lg="1" cols="2" id="sidebar">
-      <b-nav vertical>
-        <b-nav-item href="#home">
+  <!-- <b-container> -->
+    <b-tabs
+      vertical
+      pills
+      class="mx-0 my-4"
+      nav-wrapper-class="tab-nav-sticky"
+      nav-class="border-0 text-center"
+    >
+      <b-tab active title-link-class="border-0">
+        <template #title>
           <b-icon icon="house-door"></b-icon><br />
           Top
-        </b-nav-item>
-        <b-nav-item href="#skills">
-          <b-icon icon="tools"></b-icon><br />
-          Skills
-        </b-nav-item>
-        <b-nav-item href="#projects">
-          <b-icon icon="braces"></b-icon><br />
-          Projects
-        </b-nav-item>
-        <b-nav-item href="#contacts">
-          <b-icon icon="telephone"></b-icon><br />
-          Contacts</b-nav-item>
-        <b-nav-item href="#tmi" @click="tmi = true;">
-          <b-icon icon="tags"></b-icon><br />
-          TMI
-        </b-nav-item>
-      </b-nav>
-    </b-col>
-
-    <b-col class="mx-3">
-      <article>
-        <section>
-          <h2 class="text-violet">
+        </template>
+        <section class="container">
+          <h2>
             <b-icon icon="house-door"></b-icon>
             Hello, World!
           </h2>
@@ -50,9 +36,15 @@
             </ul>
           </p>
         </section>
-
-        <section id="skills">
-          <h2 class="text-violet">
+      </b-tab>
+      
+      <b-tab title-link-class="border-0">
+        <template #title>
+          <b-icon icon="tools"></b-icon><br />
+          Skills
+        </template>
+        <section class="container">
+          <h2>
             <b-icon icon="tools"></b-icon>
             Skills
           </h2>
@@ -68,9 +60,15 @@
             </li>
           </ul>
         </section>
-
-        <section id="projects">
-          <h2 class="text-violet">
+      </b-tab>
+      
+      <b-tab title-link-class="border-0">
+        <template #title>
+          <b-icon icon="braces"></b-icon><br />
+          Projects
+        </template>
+        <section class="container">
+          <h2>
             <b-icon icon="braces"></b-icon>
             Projects
           </h2>
@@ -81,9 +79,15 @@
             </li>
           </ul>
         </section>
-
-        <section id="contacts">
-          <h2 class="text-violet">
+      </b-tab>
+      
+      <b-tab title-link-class="border-0">
+        <template #title>
+          <b-icon icon="telephone"></b-icon><br />
+          Contacts
+        </template>
+        <section class="container">
+          <h2>
             <b-icon icon="telephone"></b-icon>
             Contacts
           </h2>
@@ -108,106 +112,85 @@
             </ul>
           </address>
         </section>
-
-        <section id="tmi">
-          <h2 class="text-violet">
+      </b-tab>
+      
+      <b-tab title-link-class="border-0">
+        <template #title>
+          <b-icon icon="tags"></b-icon><br />
+          TMI
+        </template>
+        <section class="container">
+          <h2>
             <b-icon icon="tags"></b-icon>
             <abbr title="Too Much Information">TMI</abbr>
           </h2>
-          <details @click="tmi = !tmi;">
-            <summary>
-              펼치기/접기
-            </summary>
-            <ul>
-              <li>
-                <strong>Vrisel</strong>은 silver의 애너그램입니다. <br />
-                이름 지을 당시에 사용하던 노트북이 은색이라서...
-              </li>
-              <li>
-                가볍게 다뤄본 프로그래밍/스크립팅 언어들:
-                <ul>
-                  <li>
-                    mIRC에서 <abbr title="mIRC Scripting Language"><strong>mSL</strong></abbr>
-                  </li>
-                  <li>
-                    Microsoft PowerPoint에서 <abbr title="Visual Basic for Applications"><strong>VBA</strong></abbr>
-                  </li>
-                  <li>
-                    <abbr title="AutoHotKey"><strong>AHK</strong></abbr>, <strong>AutoIt</strong>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                프로그래밍 언어 외에도 각종 언어들을 좋아합니다. (듀오링고 <span style="text-decoration: underline;">{{duolingo}}</span>일차)
-                <ul>
-                  <li>
-                    일상 대화가 가능한 수준:
-                    <strong><dfn title="영어">English</dfn>, <dfn title="일본어">日本語</dfn></strong>
-                  </li>
-                  <li>
-                    기초적인 수준:
-                    <strong><dfn title="독일어">Deutsch</dfn>, <dfn title="중국 표준어">普通话</dfn></strong>
-                  </li>
-                  <li>
-                    조금 배워본 것들:
-                    <strong><dfn title="스페인어">Español</dfn>, <dfn title="아랍어">العربية</dfn></strong>
-                  </li>
-                  <li>
-                    <a href="https://ko.wikipedia.org/wiki/%EC%9D%B8%EA%B3%B5%EC%96%B4" target="blank" title="">인공어</a>:
-                    <strong><dfn title="퀘냐: 「반지의 제왕」으로 유명한 JRR톨킨의 작품에 등장하는 요정어 중 하나"><a href="https://ko.wikipedia.org/wiki/%EA%BF%B0%EB%83%90" target="blank">Quenya</a></dfn></strong>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                세벌식(3-2015) 자판을 사용합니다.
-              </li>
-              <li>
-                왼손잡이입니다. 식사는 오른손으로 합니다.
-              </li>
-            </ul>
-          </details>
+          <ul>
+            <li>
+              <strong>Vrisel</strong>은 silver의 애너그램입니다. <br />
+              이름 지을 당시에 사용하던 노트북이 은색이라서...
+            </li>
+            <li>
+              가볍게 다뤄본 프로그래밍/스크립팅 언어들:
+              <ul>
+                <li>
+                  mIRC에서 <abbr title="mIRC Scripting Language"><strong>mSL</strong></abbr>
+                </li>
+                <li>
+                  Microsoft PowerPoint에서 <abbr title="Visual Basic for Applications"><strong>VBA</strong></abbr>
+                </li>
+                <li>
+                  <abbr title="AutoHotKey"><strong>AHK</strong></abbr>, <strong>AutoIt</strong>
+                </li>
+              </ul>
+            </li>
+            <li>
+              프로그래밍 언어 외에도 각종 언어들을 좋아합니다. (듀오링고 <span style="text-decoration: underline;">{{duolingo}}</span>일차)
+              <ul>
+                <li>
+                  일상 대화가 가능한 수준:
+                  <strong><dfn title="영어">English</dfn>, <dfn title="일본어">日本語</dfn></strong>
+                </li>
+                <li>
+                  기초적인 수준:
+                  <strong><dfn title="독일어">Deutsch</dfn>, <dfn title="중국 표준어">普通话</dfn></strong>
+                </li>
+                <li>
+                  조금 배워본 것들:
+                  <strong><dfn title="스페인어">Español</dfn>, <dfn title="아랍어">العربية</dfn></strong>
+                </li>
+                <li>
+                  <a href="https://ko.wikipedia.org/wiki/%EC%9D%B8%EA%B3%B5%EC%96%B4" target="blank" title="">인공어</a>:
+                  <strong><dfn title="퀘냐: 「반지의 제왕」으로 유명한 JRR톨킨의 작품에 등장하는 요정어 중 하나"><a href="https://ko.wikipedia.org/wiki/%EA%BF%B0%EB%83%90" target="blank">Quenya</a></dfn></strong>
+                </li>
+              </ul>
+            </li>
+            <li>
+              세벌식(3-2015) 자판을 사용합니다.
+            </li>
+            <li>
+              왼손잡이입니다. 식사는 오른손으로 합니다.
+            </li>
+          </ul>
         </section>
-      </article>
-    </b-col>
-  </b-row>
+      </b-tab>
+    </b-tabs>
+  <!-- </b-container> -->
 </template>
 
 <script>
 export default {
   name: 'Home',
-  data() {
-    return {
-      tmi: location.hash == '#tmi' ? true : false
-    }
-  },
   computed: {
     duolingo() {
       return parseInt(Math.ceil((new Date() - new Date(2020, 8-1, 14))/1000/60/60/24) - 25);
-    }
-  },
-  watch: {
-    tmi: function(newVal) {
-      let det = document.getElementsByTagName('details')[0];
-      if (newVal) {
-        det.setAttribute('open', true);
-      }
-      else {
-        det.setAttribute('open', false);
-      }
     }
   }
 }
 </script>
 
-<style scoped>
-#sidebar {
+<style>
+.tab-nav-sticky {
   position: sticky;
   top: 3.5rem;
-  height: 100%;
-  text-align: center;
-}
-
-section {
-  margin-bottom: 3rem;
 }
 </style>
