@@ -162,7 +162,7 @@
                 </li>
                 <li>
                   발만 담가본 수준:
-                  <strong><dfn title="프랑스어">Français</dfn>, <strong><dfn title="스페인어">Español</dfn>, <dfn title="아랍어">العربية</dfn></strong>
+                  <strong><dfn title="프랑스어">Français</dfn>, <dfn title="스페인어">Español</dfn>, <dfn title="아랍어">العربية</dfn></strong>
                 </li>
                 <li>
                   <a href="https://ko.wikipedia.org/wiki/%EC%9D%B8%EA%B3%B5%EC%96%B4" target="blank" title="">인공어</a>:
@@ -188,7 +188,7 @@ export default {
   name: 'Home',
   computed: {
     duolingo() {
-      return parseInt(Math.ceil((new Date() - new Date(2020, 8-1, 14))/1000/60/60/24) - 25);
+      return parseInt(Math.ceil((new Date() - new Date(2020, 8-1, 14))/1000/60/60/24) - 26);
     }
   }
 }
