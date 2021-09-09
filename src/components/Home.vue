@@ -7,10 +7,10 @@
       nav-wrapper-class="tab-nav-sticky"
       nav-class="border-0 text-center"
     >
-      <b-tab active title-link-class="border-0">
+      <b-tab title-link-class="border-0" active>
         <template #title>
           <b-icon icon="house-door"></b-icon><br />
-          Top
+          Hello
         </template>
         <section class="container">
           <h2>
@@ -18,7 +18,7 @@
             Hello, World!
           </h2>
           <p>
-            백&프론트 풀스택 프로그래머를 지망하는 <strong>Vrisel</strong>입니다.
+            백&프론트 풀스택 프로그래머를 지망하는 <strong>브리셀(Vrisel)</strong>입니다.
             <ul>
               <li>
                 <dfn title="새 사도신경">"나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다."</dfn>
@@ -41,12 +41,14 @@
       <b-tab title-link-class="border-0">
         <template #title>
           <b-icon icon="tools"></b-icon><br />
-          Skills
+          기술
+          <span lang="en" hidden>Skills</span>
         </template>
         <section class="container">
           <h2>
             <b-icon icon="tools"></b-icon>
-            Skills
+            기술
+            <span lang="en" hidden>Skills</span>
           </h2>
           <ul>
             <li>
@@ -65,12 +67,14 @@
       <b-tab title-link-class="border-0">
         <template #title>
           <b-icon icon="braces"></b-icon><br />
-          Projects
+          프로젝트
+          <span lang="en" hidden>Projects</span>
         </template>
         <section class="container">
           <h2>
             <b-icon icon="braces"></b-icon>
-            Projects
+            프로젝트
+            <span lang="en" hidden>Projects</span>
           </h2>
           <ul>
             <li>
@@ -84,12 +88,14 @@
       <b-tab title-link-class="border-0">
         <template #title>
           <b-icon icon="telephone"></b-icon><br />
-          Contacts
+          연락처
+          <span lang="en" hidden>Contacts</span>
         </template>
         <section class="container">
           <h2>
             <b-icon icon="telephone"></b-icon>
-            Contacts
+            연락처
+            <span lang="en" hidden>Contacts</span>
           </h2>
           <address>
             <ul>
@@ -151,12 +157,12 @@
                   <strong><dfn title="영어">English</dfn>, <dfn title="일본어">日本語</dfn></strong>
                 </li>
                 <li>
-                  기초적인 수준:
+                  간단한 독해가 가능한 수준:
                   <strong><dfn title="독일어">Deutsch</dfn>, <dfn title="중국 표준어">普通话</dfn></strong>
                 </li>
                 <li>
-                  조금 배워본 것들:
-                  <strong><dfn title="스페인어">Español</dfn>, <dfn title="아랍어">العربية</dfn></strong>
+                  발만 담가본 수준:
+                  <strong><dfn title="프랑스어">Français</dfn>, <strong><dfn title="스페인어">Español</dfn>, <dfn title="아랍어">العربية</dfn></strong>
                 </li>
                 <li>
                   <a href="https://ko.wikipedia.org/wiki/%EC%9D%B8%EA%B3%B5%EC%96%B4" target="blank" title="">인공어</a>:
