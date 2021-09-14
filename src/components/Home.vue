@@ -52,10 +52,15 @@
           </h2>
           <ul>
             <li>
-              <strong>HTML, CSS</strong> 문법을 이해합니다.
+              <strong><abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr></strong> 문법을 이해합니다.
+              <ul>
+                <li>
+                  <strong>웹 콘텐츠 접근성 지침(<abbr title="Web Content Accessiblity Guidelines">WCAG</abbr>)</strong>을 준수하기 위해 노력합니다.
+                </li>
+              </ul>
             </li>
             <li>
-              <strong>Python, C#, SQL, JavaScript, Java</strong> 등을 배우고 있습니다.
+              <strong>JavaScript(JQuery, Vue.js), SQL(SQL Server), Python</strong> 등을 공부하고 있습니다.
             </li>
             <li>
               <strong><abbr title="Model, View, Controller">MVC</abbr></strong> 구조를 배우고 있습니다.
@@ -76,12 +81,51 @@
             프로젝트
             <span lang="en" hidden>Projects</span>
           </h2>
-          <ul>
-            <li>
-              <a href="https://github.com/Vrisel/LyricsToSlide">LyricsToSlide</a>:
-              가사 슬라이드를 쉽게 만들 수 있는 매크로 (Microsoft PowerPoint, 구역 기능이 있는 버전 이상에서 작동)
-            </li>
-          </ul>
+
+          <b-table-simple>
+            <b-thead>
+              <b-tr>
+                <b-th>프로젝트</b-th>
+                <b-th>사용기술</b-th>
+                <b-th>요약</b-th>
+              </b-tr>
+            </b-thead>
+            <b-tbody>
+              <b-tr>
+                <b-td>
+                  <b-link href="https://github.com/Vrisel/BBS_2108" target="_blank">게시판</b-link>
+                </b-td>
+                <b-td>
+                  ASP.NET, JavaScript, JQuery, Bootstrap, SQL Server
+                </b-td>
+                <b-td>
+                  CRUD 기능을 모두 갖춘 MVC 구조의 게시판 사이트 구현
+                </b-td>
+              </b-tr>
+              <b-tr>
+                <b-td>
+                  <b-link href="//github.com/Vrisel/vrisel.github.io" target="_blank">GitPage</b-link>
+                </b-td>
+                <b-td>
+                  <!-- HTML, CSS, JavaScript, --> Vue.js, Bootstrap
+                </b-td>
+                <b-td>
+                  포트폴리오 용 개인 홈페이지
+                </b-td>
+              </b-tr>
+              <b-tr>
+                <b-td>
+                  <b-link href="//github.com/Vrisel/LyricsToSlide" target="_blank">LyricsToSlide</b-link>
+                </b-td>
+                <b-td>
+                  VBA
+                </b-td>
+                <b-td>
+                  가사 슬라이드를 쉽게 만들 수 있는 매크로 (Microsoft PowerPoint, 구역 기능이 있는 버전 이상에서 작동)
+                </b-td>
+              </b-tr>
+            </b-tbody>
+          </b-table-simple>
         </section>
       </b-tab>
       
@@ -94,28 +138,28 @@
         <section class="container">
           <h2>
             <b-icon icon="telephone"></b-icon>
-            연락처
-            <span lang="en" hidden>Contacts</span>
+            연락처 및 링크
+            <span lang="en" hidden>Contacts and Links</span>
           </h2>
           <address>
-            <ul>
-              <li>
-                <b-icon icon="github"></b-icon>
-                GitHub: <b-link href="//github.com/vrisel" target="blank">Vrisel</b-link>
-              </li>
-              <li>
-                <b-icon icon="journal"></b-icon>
-                Velog: <b-link href="//velog.io/@vrisel" target="blank">@Vrisel</b-link>
-              </li>
-              <li>
-                <b-icon icon="twitter"></b-icon>
-                Twitter: <b-link href="//twitter.com/vrisel_p" target="blank">브리셀 @Vrisel_p</b-link>
-              </li>
-              <li>
+            <b-list-group class="mx-4 col-xl-3 col-xl-4 col-md-5 col-6">
+              <b-list-group-item href="mailto:vrisel.p@gmail.com">
                 <b-icon icon="envelope"></b-icon>
-                E-mail: <b-link href="mailto:vrisel.p@gmail.com">vrisel.p@gmail.com</b-link>
-              </li>
-            </ul>
+                E-mail
+              </b-list-group-item>
+              <b-list-group-item href="//github.com/vrisel" target="blank">
+                <b-icon icon="github"></b-icon>
+                GitHub
+              </b-list-group-item>
+              <b-list-group-item href="//velog.io/@vrisel" target="blank">
+                <b-icon icon="journal"></b-icon>
+                Velog
+              </b-list-group-item>
+              <b-list-group-item href="//twitter.com/vrisel_p" target="blank">
+                <b-icon icon="twitter"></b-icon>
+                Twitter
+              </b-list-group-item>
+            </b-list-group>
           </address>
         </section>
       </b-tab>
@@ -132,7 +176,7 @@
           </h2>
           <ul>
             <li>
-              <strong>Vrisel</strong>은 silver의 애너그램입니다. <br />
+              <strong>Vrisel</strong>은 silver의 <dfn title="철자의 위치를 뒤바꾼 문구">애너그램</dfn>입니다. <br />
               이름 지을 당시에 사용하던 노트북이 은색이라서...
             </li>
             <li>
@@ -162,16 +206,16 @@
                 </li>
                 <li>
                   발만 담가본 수준:
-                  <strong><dfn title="프랑스어">Français</dfn>, <dfn title="스페인어">Español</dfn>, <dfn title="아랍어">العربية</dfn></strong>
+                  <strong><dfn title="프랑스어">Français</dfn>, <dfn title="스페인어">Español</dfn>, <dfn title="아랍어"><bdi>العربية</bdi></dfn></strong>
                 </li>
                 <li>
-                  <a href="https://ko.wikipedia.org/wiki/%EC%9D%B8%EA%B3%B5%EC%96%B4" target="blank" title="">인공어</a>:
+                  <dfn title="의도나 목적을 가지고 만들어진 언어. 자연어와 대조됨"><a href="//ko.wikipedia.org/wiki/%EC%9D%B8%EA%B3%B5%EC%96%B4" target="blank">인공어</a></dfn>:
                   <strong><dfn title="퀘냐: 「반지의 제왕」으로 유명한 JRR톨킨의 작품에 등장하는 요정어 중 하나"><a href="https://ko.wikipedia.org/wiki/%EA%BF%B0%EB%83%90" target="blank">Quenya</a></dfn></strong>
                 </li>
               </ul>
             </li>
             <li>
-              세벌식(3-2015) 자판을 사용합니다.
+              <b-link href="//cafe.daum.net/3bulsik/JMKX/34" target="_blank">세벌식(3-2015) 자판</b-link>을 사용합니다.
             </li>
             <li>
               왼손잡이입니다. 식사는 오른손으로 합니다.
@@ -188,7 +232,7 @@ export default {
   name: 'Home',
   computed: {
     duolingo() {
-      return parseInt(Math.ceil((new Date() - new Date(2020, 8-1, 14))/1000/60/60/24) - 26);
+      return parseInt(Math.ceil((new Date() - new Date(2020, 8-1, 14))/1000/60/60/24) - 28);
     }
   }
 }
